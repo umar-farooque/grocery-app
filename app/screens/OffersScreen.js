@@ -7,7 +7,7 @@ import Seperator from "../components/Seperator";
 
 export default function OffersScreen({ navigation, route }) {
   const { data } = route.params;
-
+  // console.log();
   let renderItem = (item) => (
     <OfferCard
       item={item.item}

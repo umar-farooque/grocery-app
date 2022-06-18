@@ -21,7 +21,11 @@ export default function ItemComponent({ data, title, onPress }) {
       />
     </View>
   );
-  // useEffect(() => console.log("Item componenet"));
+  // useEffect(() => {
+  //   console.log("==========****************============****==============");
+  //   console.log(data);
+  //   console.log("====================================");
+  // }, []);
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -32,11 +36,19 @@ export default function ItemComponent({ data, title, onPress }) {
       </View>
       <FlatList
         data={data}
-        keyExtractor={(item) => item.title}
+        // onLayout={(e) =>
+        //   console.log(
+        //     "<==================>",
+        //     e.nativeEvent.layout,
+        //     "<==================>"
+        //   )
+        // }
+        keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
         contentContainerStyle={{ paddingHorizontal: 5 }}
         horizontal
         showsHorizontalScrollIndicator={false}
+        // ListEmptyComponent={<View style={{ height: 50, width: "100%" }}></View>}
       />
     </View>
   );
@@ -53,12 +65,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 5,
     paddingHorizontal: 15,
+    fontFamily: "Quicksand_600SemiBold",
   },
   subtitle: {
     color: "#615E5E",
     fontSize: 18,
     marginVertical: 5,
     paddingHorizontal: 15,
+    fontFamily: "Quicksand_600SemiBold",
   },
   AndroidContainer: { marginHorizontal: 5, paddingVertical: 5 },
   IosContainer: {

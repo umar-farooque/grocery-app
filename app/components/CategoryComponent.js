@@ -1,22 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, StyleSheet, FlatList, Platform } from "react-native";
 import AppText from "../components/AppText";
 import CategoryCard from "./CategoryCard";
 
-function CategoryComponent({ data, title, onTextPress, onPress }) {
-  let renderItem = (item) => (
-    <View
-      style={
-        Platform.OS === "ios" ? styles.IosContainer : styles.AndroidContainer
-      }
-    >
-      <CategoryCard
-        source={item.item.source}
-        text={item.item.title}
-        onPress={onPress}
-      />
-    </View>
-  );
+import { useNavigation } from "@react-navigation/core";
+
+function CategoryComponent({
+  data,
+  title,
+  onTextPress,
+  onPressTitle,
+  fontFamily,
+}) {
+  const navigation = useNavigation();
+  // let loadfont = async () => {
+  //   return await Font.loadAsync({ OverlockSC_400Regular });
+  // };
+
+  // useEffect(() => {
+  //   // loadfont();
+  //   // console.log(title, onPressTitle);
+  // }, []);
+  // console.log(font);
+  let renderItem = (item) => {
+    // console.log(item.item.source.url);
+    return (
+      <View
+        style={
+          Platform.OS === "ios" ? styles.IosContainer : styles.AndroidContainer
+        }
+      >
+        <CategoryCard
+          // source={item.item.source.url}
+          source={item.item.source}
+          text={item.item.title}
+          onPress={() =>
+            navigation.navigate("subcategory", {
+              title: item.item.title,
+              Title: onPressTitle,
+              subtitle: item.item.onPressTitle,
+            })
+          }
+        />
+      </View>
+    );
+  };
   return (
     <View style={{ marginVertical: 10, paddingBottom: 5 }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -41,8 +69,9 @@ const styles = StyleSheet.create({
   container: {},
   title: {
     fontSize: 20,
-    // fontWeight: "bold",
+    // fontWeight: "700",
     // textAlign: "center",
+    fontFamily: "Quicksand_600SemiBold",
     textTransform: "capitalize",
     marginVertical: 5,
     paddingHorizontal: 15,
@@ -54,6 +83,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     textTransform: "capitalize",
     color: "#615E5E",
+    fontFamily: "Quicksand_600SemiBold",
   },
   IosContainer: {
     marginHorizontal: 2,

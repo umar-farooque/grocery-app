@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { View, StyleSheet, Text, FlatList, ScrollView } from "react-native";
 
 import { masala } from "../utils/Items";
-
 import OfferCard from "../components/OfferCard";
 import Seperator from "../components/Seperator";
 import CartCard from "../components/CartCard";
@@ -10,20 +9,51 @@ import AppText from "../components/AppText";
 import CartButton from "../components/CartButton";
 import colors from "../utils/colors";
 import ShoppingCartContext from "../context/ShoppingCart";
+import { Icon } from "react-native-elements";
+import EmptyCartIndicator from "../components/EmptyCartIndicator";
+import cacheStore from "../utils/cartItem";
 
-function CartScreen(props) {
+function CartScreen({ navigation }) {
   let context = useContext(ShoppingCartContext);
   let [amount, setAmount] = useState(0);
+  let [items, setItems] = useState({ data: [], amount: 0 });
 
   let deliveryCharge = 40;
   let minimumAmount = 1000;
 
-  let renderItem = (item) => <CartCard item={item.item} />;
+  let renderItem = (item) => {
+    return (
+      <View stype={{ marginVertical: 2 }}>
+        <CartCard item={item.item} />
+      </View>
+    );
+  };
+  let sum = 0;
+  async function getList() {
+    const data = await cacheStore.getItems();
+    if (data === null) return false;
+    // setItems(data)
+    data.forEach((data) => (sum += parseInt(data.value.price)));
+    setItems({ data, amount: sum });
+
+    // console.log(data);
+    // data.forEach((item) => {
+    //   console.log(item);
+    // });
+  }
   useEffect(() => {
+    if (context.items.length) {
+      return setAmount(context.getTotal());
+    }
     // console.log("_____++++++", amount);
-    setAmount(context.getTotal());
+    // console.log("sum cart items :", sum);
+    // getList();
+    // cacheStore.getSum();
+
+    // cacheStore.get().then((data) => console.log(JSON.parse(data)));
   }, [context.getTotal()]);
   // console.log("++++++", );
+  const Total = amount < minimumAmount ? amount + deliveryCharge : amount;
   return (
     <>
       {context.items.length > 0 ? (
@@ -43,7 +73,12 @@ function CartScreen(props) {
             </View>
 
             <View style={styles.ItemContainer}>
-              <AppText style={{ fontWeight: "bold", marginBottom: 10 }}>
+              <AppText
+                style={{
+                  fontFamily: "Quicksand_600SemiBold",
+                  marginBottom: 10,
+                }}
+              >
                 Payment Details
               </AppText>
               <View
@@ -74,20 +109,24 @@ function CartScreen(props) {
                   justifyContent: "space-between",
                 }}
               >
-                <AppText style={{ fontWeight: "bold" }}>Total Amount</AppText>
-                <AppText style={{ fontWeight: "bold" }}>
-                  Rs.{" "}
-                  {amount < minimumAmount ? amount + deliveryCharge : amount}
+                <AppText style={{ fontFamily: "Quicksand_600SemiBold" }}>
+                  Total Amount
+                </AppText>
+                <AppText style={{ fontFamily: "Quicksand_600SemiBold" }}>
+                  Rs.
+                  {Total}
                 </AppText>
               </View>
             </View>
           </ScrollView>
 
           <View style={styles.paymentContainer}>
-            <View style={{ width: "35%", marginLeft: 5 }}>
-              <AppText style={{}}>Payable Amount</AppText>
-              <AppText style={{ fontWeight: "bold" }}>
-                Rs. {amount < minimumAmount ? amount + deliveryCharge : amount}
+            <View style={{ width: "37%", marginLeft: 5 }}>
+              <AppText style={{}}>Total Amount</AppText>
+              <AppText
+                style={{ fontFamily: "Quicksand_600SemiBold", marginTop: 5 }}
+              >
+                Rs. {Total}
               </AppText>
             </View>
             <View style={{ width: "50%" }}>
@@ -95,21 +134,15 @@ function CartScreen(props) {
                 title="Checkout"
                 style={styles.cartButton}
                 titleStyle={{ color: "#fff", fontSize: 20 }}
+                onPress={() =>
+                  navigation.navigate("checkout", { amount: Total })
+                }
               />
             </View>
           </View>
         </>
       ) : (
-        <View
-          style={{
-            width: "100%",
-            height: "100%",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <AppText>Cart is Empty</AppText>
-        </View>
+        <EmptyCartIndicator />
       )}
     </>
   );
@@ -120,7 +153,7 @@ const styles = StyleSheet.create({
   cartItems: {
     margin: 10,
     borderRadius: 25,
-    backgroundColor: "white",
+    // backgroundColor: "white",
     overflow: "hidden",
     padding: 5,
   },
@@ -133,15 +166,17 @@ const styles = StyleSheet.create({
     // height: 150,
   },
   paymentContainer: {
-    height: 70,
+    // height: 90,
     width: "100%",
     backgroundColor: "white",
     position: "absolute",
     bottom: 0,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
-    padding: 10,
+    alignItems: "flex-start",
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+    borderTopWidth: 0.5,
   },
   cartButton: {
     padding: 20,

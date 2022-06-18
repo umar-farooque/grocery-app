@@ -26,6 +26,7 @@ function ItemCard({ item }) {
     quantity,
     availableQuantity,
     count,
+    company,
     addedToCart,
   } = item;
   const navigation = useNavigation();
@@ -46,22 +47,42 @@ function ItemCard({ item }) {
     context.decreaseCount(item);
   };
 
-  let newItem = {
-    id,
-    source,
-    title,
-    availableQuantity,
-    count,
-    addedToCart,
-    price: updatedPrice ? updatedPrice : price,
-    quantity: updatedQuantity ? updatedQuantity : quantity,
+  // let newItem = {
+  //   ...item,
+  //   price: updatedPrice ? updatedPrice : price,
+  //   quantity: updatedQuantity ? updatedQuantity : quantity,
+  //   itemAdded:()=>
+  // };
+  let itemAdded = (item, updatedPrice, updatedQuantity) => {
+    setVisible(false);
+    context.addItems(item, updatedPrice, updatedQuantity);
+    return;
   };
-  // useEffect(() => console.log("Item CArd 1"));
-  let handlePress = () => navigation.navigate("detail", { data: newItem });
+
+  // useEffect(() => {
+  //   console.log("**Item CArd**", id, count, addedToCart);
+  //   // React.Component.forceUpdate();
+  // }, []);
+
+  let handlePress = () =>
+    navigation.navigate("detail", {
+      data: item,
+      updatedPrice,
+      updatedQuantity,
+      itemAdded,
+    });
+
+  // console.log("-------------->", count, addedToCart);
+  // console.log(source);
+  // console.log(visible);
   return (
     <TouchableWithoutFeedback onPress={handlePress}>
       <View style={styles.container}>
-        <Image source={source} resizeMode="contain" style={styles.image} />
+        <Image
+          source={source.url ? { uri: source.url } : source}
+          resizeMode="contain"
+          style={styles.image}
+        />
         <View style={styles.details}>
           <AppText style={styles.text} lines={1}>
             {title}
@@ -73,38 +94,49 @@ function ItemCard({ item }) {
                 color={colors.primary}
                 type="font-awesome"
                 size={16}
+                containerStyle={styles.iconContainer}
                 iconStyle={styles.iconStyles}
               />
               <AppText style={{ marginLeft: 3, color: colors.primary }}>
                 {updatedPrice ? updatedPrice : price}
               </AppText>
             </View>
-            <View style={{ width: "58%" }}>
-              <AppPicker
-                title={title}
-                placeholder={quantity}
-                items={availableQuantity}
-                item={item}
-                price={(value, quantity) => {
-                  if (item.addedToCart) {
-                    context.updateQuantity(item, quantity, value);
-                    setUpdatedPrice("");
-                    setUpdatedQuantity("");
-                    return;
-                  }
-                  setUpdatedPrice(value);
-                  setUpdatedQuantity(quantity);
-                }}
-              />
-            </View>
+
+            {availableQuantity && availableQuantity.length > 0 ? (
+              <View style={{ width: "58%" }}>
+                <AppPicker
+                  title={title}
+                  placeholder={quantity}
+                  items={availableQuantity}
+                  item={item}
+                  price={(value, quantity) => {
+                    if (item.addedToCart) {
+                      context.updateQuantity(item, quantity, value);
+                      setUpdatedPrice("");
+                      setUpdatedQuantity("");
+                      return;
+                    }
+                    // console.log("776544");
+                    setUpdatedPrice(value);
+                    setUpdatedQuantity(quantity);
+                  }}
+                />
+              </View>
+            ) : (
+              <AppText style={{ color: colors.primary }}> {quantity}</AppText>
+            )}
           </View>
         </View>
         <View style={{ paddingHorizontal: 15 }}>
-          {visible ? (
+          {visible || count == 0 ? (
             <CartButton
               onPress={() => {
-                context.addItems(item);
+                console.log("pressed");
+                context.addItems(item, updatedPrice, updatedQuantity);
+
                 setVisible(false);
+                return;
+                // console.log(visible, count == 0);
               }}
             />
           ) : (
@@ -140,6 +172,10 @@ const styles = StyleSheet.create({
 
     elevation: 6,
   },
+  iconContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
   text: {
     marginBottom: 10,
     // fontWeight: "700",
@@ -159,7 +195,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   iconStyles: {
-    marginTop: 3,
+    marginTop: 5,
     justifyContent: "center",
     alignItems: "center",
   },

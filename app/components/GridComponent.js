@@ -4,6 +4,7 @@ import AppText from "./AppText";
 import GridCard from "./GridCard";
 
 import { useNavigation } from "@react-navigation/core";
+
 export default function GridComponent({
   data,
   title,
@@ -11,11 +12,17 @@ export default function GridComponent({
   textStyle,
   subtitle = true,
   onTextPress,
-  onPress,
+  onPressTitle,
 }) {
   let navigation = useNavigation();
+  // console.log(onPressTitle, onTextPress);
+
   let handlePress = (category) =>
-    navigation.navigate("subcategory", { title: category.title });
+    navigation.navigate("subcategory", {
+      title: category.title,
+      Title: onPressTitle,
+      subtitle: category.onPressTitle,
+    });
 
   let renderItem = (item) => (
     <View
@@ -42,7 +49,13 @@ export default function GridComponent({
           </AppText>
         )}
       </View>
-      <View style={{ justifyContent: "center", alignItems: "center" }}>
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          // backgroundColor: "orange",
+        }}
+      >
         <FlatList
           key={"#"}
           data={data}
@@ -71,16 +84,13 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     borderRadius: 25,
     backgroundColor: "#fff",
-    // padding: 5,
   },
   title: {
     fontSize: 20,
-    // fontWeight: "bold",
-    // textAlign: "center",
     textTransform: "capitalize",
     marginVertical: 5,
     paddingHorizontal: 15,
-    // color: "white",
+    fontFamily: "Quicksand_600SemiBold",
   },
   subtitle: {
     fontSize: 18,
@@ -88,9 +98,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     textTransform: "capitalize",
     color: "#615E5E",
+    fontFamily: "Quicksand_600SemiBold",
   },
   AndroidContainer: {
     padding: 5,
+    // backgroundColor: "orange",
   },
   IosContainer: {
     padding: 5,

@@ -10,5 +10,5 @@ export default function AppText({ children, style, lines = null, onPress }) {
 }
 
 const styles = StyleSheet.create({
-  text: { fontSize: 17 },
+  text: { fontSize: 17, fontFamily: "Quicksand_500Medium" },
 });

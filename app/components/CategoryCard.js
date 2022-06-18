@@ -8,6 +8,7 @@ function CategoryCard({ text, source, style, onPress }) {
       <View style={{ marginTop: 5 }}>
         <Image
           source={source}
+          // source={source.url ? { uri: source.url } : source}
           style={styles.image}
           resizeMode="contain"
           // resizeMethod="auto"

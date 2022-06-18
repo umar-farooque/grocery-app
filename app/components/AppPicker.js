@@ -17,7 +17,7 @@ export default function AppPicker({ placeholder, items, title, item, price }) {
   let [visible, setVisible] = useState(false);
   let [value, setValue] = useState("");
   // useEffect(() => console.log("App Picker"));
-  // console.log(price);
+  // console.log("APP Picker rerendered", placeholder);
   let renderItem = (item) => (
     <TouchableOpacity
       onPress={() => {
@@ -48,7 +48,13 @@ export default function AppPicker({ placeholder, items, title, item, price }) {
     <>
       <TouchableWithoutFeedback onPress={() => setVisible(true)}>
         <View style={styles.container}>
-          <AppText style={styles.text}>{value ? value : placeholder}</AppText>
+          <AppText style={styles.text}>
+            {item && item.addedToCart
+              ? placeholder
+              : value
+              ? value
+              : placeholder}
+          </AppText>
           <Icon
             name="md-chevron-down-circle-sharp"
             type="ionicon"

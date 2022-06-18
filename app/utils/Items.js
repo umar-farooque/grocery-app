@@ -98,6 +98,609 @@ let masala = [
     addedToCart: false,
   },
 ];
+let topSelling = [
+  {
+    id: 1,
+    source: require("../assets/images/mustardOil.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 2,
+    source: require("../assets/images/shampoo.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 3,
+    source: require("../assets/images/showergels.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 4,
+    source: require("../assets/images/cookingOil.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 5,
+    source: require("../assets/images/chips.jpg"),
+    title: "Chips PAck of 4",
+    price: "80",
+    quantity: "500 gm",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 6,
+    source: require("../assets/images/cookingOil2.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+];
+
+let topDeals = [
+  {
+    id: 1,
+    source: require("../assets/images/shampoo.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 2,
+    source: require("../assets/images/sugar.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 gm",
+    availableQuantity: [
+      { quantity: "500 gm", price: "255" },
+      { quantity: "1 kg", price: "700" },
+      { quantity: "3 kg", price: "1200" },
+      { quantity: "5 kg", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 3,
+    source: require("../assets/images/mustardOil.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 4,
+    source: require("../assets/images/tea.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 gm",
+    availableQuantity: [
+      { quantity: "500 gm", price: "255" },
+      { quantity: "1 kg", price: "700" },
+      { quantity: "3 kg", price: "1200" },
+      { quantity: "5 kg", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 5,
+    source: require("../assets/images/oliveOil.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 6,
+    source: require("../assets/images/cakes.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "100 gm",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+];
+
+let skinCare = [
+  {
+    id: 1,
+    source: require("../assets/images/summerCare.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "75 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 2,
+    source: require("../assets/images/winterCare.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "50 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 3,
+    source: require("../assets/images/moisturizer.webp"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "250",
+    quantity: "500 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 4,
+    source: require("../assets/images/summerCare.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 5,
+    source: require("../assets/images/moisturizer.webp"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "259",
+    quantity: "200 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 6,
+    source: require("../assets/images/winterCare.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "105",
+    quantity: "50 gm",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+];
+
+let hairCare = [
+  {
+    id: 1,
+    source: require("../assets/images/shampoo.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "329",
+    quantity: "500 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 2,
+    source: require("../assets/images/showergels.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "350",
+    quantity: "200 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 3,
+    source: require("../assets/images/hairOil.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "500 ml",
+    availableQuantity: [
+      { quantity: "500 ml", price: "255" },
+      { quantity: "1 ltr", price: "700" },
+      { quantity: "5 ltr", price: "1200" },
+      { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 4,
+    source: require("../assets/images/shampoo.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "200 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 5,
+    source: require("../assets/images/hairOil.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "100",
+    quantity: "50 ml",
+    availableQuantity: [
+      { quantity: "100 ml", price: "135" },
+      { quantity: "150 ml", price: "169" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 6,
+    source: require("../assets/images/hairOil1.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "225",
+    quantity: "200 ml",
+    // availableQuantity: [
+    //   { quantity: "500 ml", price: "255" },
+    //   { quantity: "1 ltr", price: "700" },
+    //   { quantity: "5 ltr", price: "1200" },
+    //   { quantity: "10 ltr", price: "1500" },
+    // ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+];
+
+let readyToBake = [
+  {
+    id: 1,
+    source: require("../assets/images/im.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "155",
+    quantity: "100 gm",
+    availableQuantity: [
+      { quantity: "100 gm", price: "155" },
+      { quantity: "200 gm", price: "300" },
+      // { quantity: "1 ltr", price: "700" },
+      // { quantity: "5 ltr", price: "1200" },
+      // { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 2,
+    source: require("../assets/images/im2.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "100 gm",
+    availableQuantity: [
+      { quantity: "100 gm", price: "255" },
+      { quantity: "200 gm", price: "300" },
+      // { quantity: "1 ltr", price: "700" },
+      // { quantity: "5 ltr", price: "1200" },
+      // { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 3,
+    source: require("../assets/images/im3.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "100 gm",
+    availableQuantity: [
+      { quantity: "100 gm", price: "255" },
+      { quantity: "200 gm", price: "300" },
+      // { quantity: "1 ltr", price: "700" },
+      // { quantity: "5 ltr", price: "1200" },
+      // { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 4,
+    source: require("../assets/images/im4.png"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "100 gm",
+    availableQuantity: [
+      { quantity: "100 gm", price: "255" },
+      { quantity: "200 gm", price: "300" },
+      // { quantity: "1 ltr", price: "700" },
+      // { quantity: "5 ltr", price: "1200" },
+      // { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 5,
+    source: require("../assets/images/im.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "100 gm",
+    availableQuantity: [
+      { quantity: "200 gm", price: "300" },
+      { quantity: "100 gm", price: "255" },
+      // { quantity: "1 ltr", price: "700" },
+      // { quantity: "5 ltr", price: "1200" },
+      // { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 6,
+    source: require("../assets/images/im3.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "255",
+    quantity: "100 gm",
+    availableQuantity: [
+      { quantity: "200 gm", price: "300" },
+      { quantity: "100 gm", price: "255" },
+      // { quantity: "1 ltr", price: "700" },
+      // { quantity: "5 ltr", price: "1200" },
+      // { quantity: "10 ltr", price: "1500" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+];
+
+let household = [
+  {
+    id: 1,
+    source: require("../assets/images/harpic.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "99",
+    quantity: "75 ml",
+    availableQuantity: [
+      { quantity: "75 ml", price: "99" },
+      { quantity: "150 ltr", price: "250" },
+    ],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 2,
+    source: require("../assets/images/liquidDetergent.png"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "250",
+    quantity: "100 ml",
+    availableQuantity: [],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 3,
+    source: require("../assets/images/dishawash.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "100",
+    quantity: "75 ml",
+    availableQuantity: [],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 4,
+    source: require("../assets/images/handwash.jpeg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "300",
+    quantity: "250 ml",
+    availableQuantity: [],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 5,
+    source: require("../assets/images/harpic.jpg"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "350",
+    quantity: "250 ml",
+    availableQuantity: [],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+  {
+    id: 6,
+    source: require("../assets/images/liquidDetergent.png"),
+    title:
+      "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
+    price: "75",
+    quantity: "50 ml",
+    availableQuantity: [],
+    company: "Gemini",
+    count: 0,
+    addedToCart: false,
+  },
+];
 
 let allData = {
   Grains: {
@@ -107,16 +710,16 @@ let allData = {
       wheat: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -124,16 +727,16 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -141,16 +744,16 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -158,16 +761,16 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -175,16 +778,16 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -192,16 +795,16 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -211,16 +814,16 @@ let allData = {
       rice: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -228,16 +831,16 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -245,16 +848,16 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -262,16 +865,16 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -279,16 +882,16 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -298,16 +901,16 @@ let allData = {
       sugar: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/sugar.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -315,16 +918,16 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/sugar.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -332,16 +935,16 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/sugar.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -349,16 +952,16 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/sugar.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
-          quantity: "500 ml",
+          quantity: "1kg ",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg", price: "255" },
+            { quantity: "5 kg", price: "700" },
+            { quantity: "10 kg", price: "1200" },
+            { quantity: "20 kg", price: "1500" },
           ],
           company: "Gemini",
           count: 0,
@@ -368,16 +971,15 @@ let allData = {
       tea: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/tea.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -385,16 +987,15 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/tea.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -402,16 +1003,15 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/tea.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -419,16 +1019,15 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/tea.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -438,16 +1037,15 @@ let allData = {
       barley: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "150",
+          quantity: "500 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "500 gm", price: "150" },
+            { quantity: "1 kg", price: "300" },
+            { quantity: "5 kg", price: "950" },
           ],
           company: "Gemini",
           count: 0,
@@ -455,16 +1053,15 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "150",
+          quantity: "500 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "500 gm", price: "150" },
+            { quantity: "1 kg", price: "300" },
+            { quantity: "5 kg", price: "950" },
           ],
           company: "Gemini",
           count: 0,
@@ -472,16 +1069,15 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "150",
+          quantity: "500 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "500 gm", price: "150" },
+            { quantity: "1 kg", price: "300" },
+            { quantity: "5 kg", price: "950" },
           ],
           company: "Gemini",
           count: 0,
@@ -489,16 +1085,15 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/wheat.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "150",
+          quantity: "500 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "500 gm", price: "150" },
+            { quantity: "1 kg", price: "300" },
+            { quantity: "5 kg", price: "950" },
           ],
           company: "Gemini",
           count: 0,
@@ -508,7 +1103,7 @@ let allData = {
       cookingOil: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookingOil3.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -525,7 +1120,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookingOil3.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -542,7 +1137,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookingOil3.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -559,7 +1154,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookingOil3.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -578,16 +1173,14 @@ let allData = {
       salt: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/salt.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "20",
+          quantity: "1 kg",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg ", price: "20" },
+            { quantity: "5 kg", price: "150" },
           ],
           company: "Gemini",
           count: 0,
@@ -595,16 +1188,14 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/salt.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "20",
+          quantity: "1 kg",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg ", price: "20" },
+            { quantity: "5 kg", price: "150" },
           ],
           company: "Gemini",
           count: 0,
@@ -612,16 +1203,14 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/salt.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "20",
+          quantity: "1 kg",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg ", price: "20" },
+            { quantity: "5 kg", price: "150" },
           ],
           company: "Gemini",
           count: 0,
@@ -629,16 +1218,14 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/salt.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "20",
+          quantity: "1 kg",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "1 kg ", price: "20" },
+            { quantity: "5 kg", price: "150" },
           ],
           company: "Gemini",
           count: 0,
@@ -648,16 +1235,15 @@ let allData = {
       spices: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spices.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -665,16 +1251,15 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spices.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -682,16 +1267,15 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spices.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -699,16 +1283,15 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spices.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -725,7 +1308,7 @@ let allData = {
       softDrinks: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/softdrinks.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -742,7 +1325,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/softdrinks.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -759,7 +1342,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/softdrinks.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -776,7 +1359,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/softdrinks.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -793,7 +1376,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/softdrinks.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -810,7 +1393,7 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/softdrinks.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -916,7 +1499,7 @@ let allData = {
       syrups: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/syrups.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -933,7 +1516,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/syrups.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -950,7 +1533,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/syrups.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -967,7 +1550,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/syrups.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -986,7 +1569,7 @@ let allData = {
       milkShake: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/milkShakes.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1003,7 +1586,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/milkShakes.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1020,7 +1603,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/milkShakes.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1037,7 +1620,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/milkShakes.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1063,16 +1646,15 @@ let allData = {
       pasta: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images//oliveOil.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -1080,16 +1662,15 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images//oliveOil.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -1097,16 +1678,15 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images//oliveOil.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -1114,16 +1694,15 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images//oliveOil.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -1131,16 +1710,15 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images//oliveOil.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -1148,16 +1726,15 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images//oliveOil.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
-          price: "255",
-          quantity: "500 ml",
+          price: "120",
+          quantity: "100 gm",
           availableQuantity: [
-            { quantity: "500 ml", price: "255" },
-            { quantity: "1 ltr", price: "700" },
-            { quantity: "5 ltr", price: "1200" },
-            { quantity: "10 ltr", price: "1500" },
+            { quantity: "100 gm", price: "120" },
+            { quantity: "150 gm", price: "700" },
+            { quantity: "250 gm", price: "1200" },
           ],
           company: "Gemini",
           count: 0,
@@ -1167,7 +1744,7 @@ let allData = {
       chocolates: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chococlates.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1184,7 +1761,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chococlates.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1201,7 +1778,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chococlates.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1218,7 +1795,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chococlates.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1235,7 +1812,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chococlates.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1254,7 +1831,7 @@ let allData = {
       spread: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spreads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1271,7 +1848,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spreads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1288,7 +1865,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spreads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1305,7 +1882,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/spreads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1324,7 +1901,7 @@ let allData = {
       bakingEssentials: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/bakingPowder.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1341,7 +1918,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/bakingPowder.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1358,7 +1935,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/bakingPowder.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1375,7 +1952,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/bakingPowder.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1401,7 +1978,7 @@ let allData = {
       detergent: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/detergent.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1418,7 +1995,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/detergent.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1435,7 +2012,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/detergent.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1452,7 +2029,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/detergent.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1469,7 +2046,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/detergent.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1486,7 +2063,7 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/detergent.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1505,7 +2082,7 @@ let allData = {
       liquidDetergent: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/liquidDetergent.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1522,7 +2099,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/liquidDetergent.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1539,7 +2116,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/liquidDetergent.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1556,7 +2133,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/liquidDetergent.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1573,7 +2150,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/liquidDetergent.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1592,7 +2169,7 @@ let allData = {
       homeCleaners: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/harpic.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1609,7 +2186,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/harpic.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1626,7 +2203,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/harpic.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1643,7 +2220,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/harpic.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1662,7 +2239,7 @@ let allData = {
       freshners: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/goodNight.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1679,7 +2256,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/goodNight.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1696,7 +2273,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/goodNight.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1713,7 +2290,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/goodNight.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1739,7 +2316,7 @@ let allData = {
       chips: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chips.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1756,7 +2333,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chips.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1773,7 +2350,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chips.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1790,7 +2367,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chips.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1807,7 +2384,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chips.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1824,7 +2401,7 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/chips.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1843,7 +2420,7 @@ let allData = {
       namkeens: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/namkeens.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1860,7 +2437,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/namkeens.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1877,7 +2454,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/namkeens.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1894,7 +2471,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/namkeens.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1911,7 +2488,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/namkeens.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1930,7 +2507,7 @@ let allData = {
       frozenSnacks: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/frozenSnacks.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1947,7 +2524,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/frozenSnacks.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1964,7 +2541,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/frozenSnacks.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -1981,7 +2558,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/frozenSnacks.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2000,7 +2577,7 @@ let allData = {
       biscuits: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/Biscuits.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2017,7 +2594,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/Biscuits.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2034,7 +2611,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/Biscuits.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2051,7 +2628,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/Biscuits.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2077,7 +2654,7 @@ let allData = {
       summerCare: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/summerCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2094,7 +2671,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/summerCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2111,7 +2688,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/summerCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2128,7 +2705,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/summerCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2145,7 +2722,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/summerCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2162,7 +2739,7 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/summerCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2181,7 +2758,7 @@ let allData = {
       winterCare: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/winterCare.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2198,7 +2775,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/winterCare.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2215,7 +2792,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/winterCare.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2232,7 +2809,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/winterCare.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2249,7 +2826,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/winterCare.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2268,7 +2845,7 @@ let allData = {
       makeup: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/makeUp.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2285,7 +2862,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/makeUp.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2302,7 +2879,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/makeUp.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2319,7 +2896,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/makeUp.png"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2338,7 +2915,7 @@ let allData = {
       beautyCreams: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/beautyImages.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2355,7 +2932,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/beautyImages.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2372,7 +2949,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/beautyImages.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2389,7 +2966,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/beautyImages.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2415,7 +2992,7 @@ let allData = {
       handwash: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/handwash.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2432,7 +3009,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/handwash.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2449,7 +3026,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/handwash.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2466,7 +3043,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/handwash.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2483,7 +3060,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/handwash.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2500,7 +3077,7 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/handwash.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2519,7 +3096,7 @@ let allData = {
       showergels: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/showergels.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2536,7 +3113,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/showergels.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2553,7 +3130,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/showergels.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2570,7 +3147,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/showergels.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2587,7 +3164,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/showergels.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2606,7 +3183,7 @@ let allData = {
       womenWellnes: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice1.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2623,7 +3200,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice1.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2640,7 +3217,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice1.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2657,7 +3234,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/rice1.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2676,7 +3253,7 @@ let allData = {
       oralCare: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/oralCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2693,7 +3270,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/oralCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2710,7 +3287,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/oralCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2727,7 +3304,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/oralCare.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2753,7 +3330,7 @@ let allData = {
       breads: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/breads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2770,7 +3347,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/breads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2787,7 +3364,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/breads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2804,7 +3381,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/breads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2821,7 +3398,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/breads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2838,7 +3415,7 @@ let allData = {
         },
         {
           id: 6,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/breads.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2857,7 +3434,7 @@ let allData = {
       buns: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/pavs.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2874,7 +3451,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/pavs.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2891,7 +3468,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/pavs.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2908,7 +3485,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/pavs.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2925,7 +3502,7 @@ let allData = {
         },
         {
           id: 5,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/pavs.jpg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2944,7 +3521,7 @@ let allData = {
       cookies: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookies.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2961,7 +3538,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookies.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2978,7 +3555,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookies.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -2995,7 +3572,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cookies.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -3014,7 +3591,7 @@ let allData = {
       cakes: [
         {
           id: 1,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cakes.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -3031,7 +3608,7 @@ let allData = {
         },
         {
           id: 2,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cakes.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -3048,7 +3625,7 @@ let allData = {
         },
         {
           id: 3,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cakes.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -3065,7 +3642,7 @@ let allData = {
         },
         {
           id: 4,
-          source: require("../assets/images/mustardOil.jpg"),
+          source: require("../assets/images/cakes.jpeg"),
           title:
             "Masala powder Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae ",
           price: "255",
@@ -3188,8 +3765,18 @@ let allData = {
 };
 
 let getData = (category, subcategory) => {
+  console.log(category, subcategory);
   let subCategories = "subCategories";
   return allData[category][subCategories][subcategory];
 };
 
-export { masala, getData };
+export {
+  masala,
+  topDeals,
+  topSelling,
+  hairCare,
+  skinCare,
+  household,
+  readyToBake,
+  getData,
+};

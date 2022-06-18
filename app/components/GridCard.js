@@ -13,7 +13,7 @@ export default function GridCard({ style, source, text, onPress }) {
     <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
       <View style={{ marginTop: 5 }}>
         <Image
-          source={source}
+          source={source.url ? { uri: source.url } : source}
           style={styles.image}
           resizeMode="contain"
           // resizeMethod="auto"

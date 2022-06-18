@@ -26,9 +26,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 15,
-    fontWeight: "bold",
+    // fontWeight: "bold",
     color: colors.primary,
     textTransform: "capitalize",
+    fontFamily: "Quicksand_600SemiBold",
   },
 });
 

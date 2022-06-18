@@ -35,7 +35,10 @@ export default function OfferCard({ item }) {
     count,
     source,
   } = item;
+  // console.log("**************************************");
   // console.log(item);
+  // console.log("**************************************");
+
   let handlePlus = () => {
     // setValue(++value);
     context.increaseCount(item);
@@ -50,24 +53,37 @@ export default function OfferCard({ item }) {
     context.decreaseCount(item);
   };
 
-  let newItem = {
-    id,
-    source,
-    title,
-    availableQuantity,
-    count,
-    addedToCart,
-    price: updatedPrice ? updatedPrice : price,
-    quantity: updatedQuantity ? updatedQuantity : quantity,
+  // let newItem = {
+  //   id,
+  //   source,
+  //   title,
+  //   availableQuantity,
+  //   count,
+  //   addedToCart,
+  //   price: updatedPrice ? updatedPrice : price,
+  //   quantity: updatedQuantity ? updatedQuantity : quantity,
+  // };
+  let itemAdded = (item, updatedPrice, updatedQuantity) => {
+    setVisible(false);
+    context.addItems(item, updatedPrice, updatedQuantity);
+    return;
   };
-  let handlePress = () => navigation.navigate("detail", { data: newItem });
+
+  let handlePress = () =>
+    navigation.navigate("detail", {
+      data: item,
+      updatedPrice,
+      updatedQuantity,
+      itemAdded,
+    });
+
   return (
     <TouchableWithoutFeedback onPress={handlePress}>
       <View style={styles.container}>
         <View style={styles.contentContainer}>
           <View style={styles.imageContainer}>
             <Image
-              source={source}
+              source={source.url ? { uri: source.url } : source}
               style={{ width: "100%", height: 150 }}
               resizeMode="contain"
             />
@@ -80,21 +96,26 @@ export default function OfferCard({ item }) {
               {title}
             </AppText>
             <View style={{ marginBottom: 15, width: "100%" }}>
-              <AppPicker
-                placeholder={quantity}
-                items={availableQuantity}
-                title={title}
-                price={(value, quantity) => {
-                  if (item.addedToCart) {
-                    context.updateQuantity(item, quantity, value);
-                    setUpdatedPrice("");
-                    setUpdatedQuantity("");
-                    return;
-                  }
-                  setUpdatedPrice(value);
-                  setUpdatedQuantity(quantity);
-                }}
-              />
+              {availableQuantity && availableQuantity.length > 0 ? (
+                <AppPicker
+                  title={title}
+                  placeholder={quantity}
+                  items={availableQuantity}
+                  item={item}
+                  price={(value, quantity) => {
+                    if (item.addedToCart) {
+                      context.updateQuantity(item, quantity, value);
+                      setUpdatedPrice("");
+                      setUpdatedQuantity("");
+                      return;
+                    }
+                    setUpdatedPrice(value);
+                    setUpdatedQuantity(quantity);
+                  }}
+                />
+              ) : (
+                <AppText style={{ color: colors.primary }}> {quantity}</AppText>
+              )}
             </View>
             <View style={styles.priceContainer}>
               <View style={styles.priceIcon}>
@@ -111,10 +132,10 @@ export default function OfferCard({ item }) {
                 </AppText>
               </View>
               <View style={styles.buttonContainer}>
-                {visible || item.count == 0 ? (
+                {visible && item.count == 0 ? (
                   <CartButton
                     onPress={() => {
-                      context.addItems(item);
+                      context.addItems(item, updatedPrice, updatedQuantity);
                       setVisible(false);
                     }}
                   />

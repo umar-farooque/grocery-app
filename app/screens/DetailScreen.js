@@ -30,13 +30,18 @@ export default function DetailScreen({ route }) {
     addedToCart,
     company,
   } = route.params.data;
+  let { itemAdded, updatedPrice, updatedQuantity } = route.params;
   const navigation = useNavigation();
   let item = route.params.data;
   // console.log("DEtail Screen", item);
-  let [selectedQuantity, setSelectedQuantity] = useState(quantity);
-  let [updatedPrice, setUpdatedPrice] = useState(price);
+  let [selectedQuantity, setSelectedQuantity] = useState(
+    updatedQuantity ? updatedQuantity : quantity
+  );
+  let [updatedprice, setUpdatedprice] = useState(
+    updatedPrice ? updatedPrice : price
+  );
   let context = useContext(ShoppingCartContext);
-  // console.log("------>", item);
+  // console.log("------>", route.params);
   let renderStyle = (item) => {
     if (addedToCart) {
       // console.log("Adding inside");
@@ -64,7 +69,7 @@ export default function DetailScreen({ route }) {
       onPress={() => {
         if (!addedToCart) {
           setSelectedQuantity(item.item.quantity);
-          setUpdatedPrice(item.item.price);
+          setUpdatedprice(item.item.price);
         } else {
           context.updateQuantity(
             route.params.data,
@@ -81,6 +86,7 @@ export default function DetailScreen({ route }) {
   );
 
   let handlePlus = () => context.increaseCount(item);
+
   let handleMinus = () => {
     if (count == 1) {
       // context.decreaseCount(item);
@@ -93,7 +99,7 @@ export default function DetailScreen({ route }) {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <Image
-          source={source}
+          source={source.url ? { uri: source.url } : source}
           style={{ width: "100%", height: "100%" }}
           resizeMode="contain"
         />
@@ -106,26 +112,35 @@ export default function DetailScreen({ route }) {
         <View style={styles.details}>
           <View styles={{}}>
             <AppText style={styles.companyText}>{company}</AppText>
-            <AppText style={{ fontWeight: "bold", marginVertical: 5 }}>
+            <AppText
+              style={{ marginVertical: 5, fontFamily: "Quicksand_700Bold" }}
+            >
               {title}
             </AppText>
-            <View style={{ flexDirection: "row", marginVertical: 5 }}>
-              <Icon
-                name="rupee"
-                color={colors.primary1}
-                type="font-awesome"
-                size={16}
-                iconStyle={styles.iconStyle}
-              />
-              <AppText style={styles.price}>
-                {addedToCart ? price : updatedPrice}
-              </AppText>
+            <View style={styles.priceContainer}>
+              <View style={styles.priceContainer}>
+                <Icon
+                  name="rupee"
+                  color={colors.primary1}
+                  type="font-awesome"
+                  size={14}
+                  iconStyle={styles.iconStyle}
+                />
+                <AppText style={styles.price}>
+                  {addedToCart ? price : updatedprice}
+                </AppText>
+              </View>
             </View>
             <View style={styles.countContainer}>
               <>
                 {addedToCart && (
                   <>
-                    <AppText style={{ marginBottom: 15, fontWeight: "bold" }}>
+                    <AppText
+                      style={{
+                        marginBottom: 15,
+                        fontFamily: "Quicksand_700Bold",
+                      }}
+                    >
                       Qty :
                     </AppText>
                     <CartButtonGroup
@@ -137,22 +152,37 @@ export default function DetailScreen({ route }) {
                 )}
               </>
             </View>
-            <AppText style={{ fontWeight: "bold", marginVertical: 10 }}>
-              Also Available in :
-            </AppText>
           </View>
-          <FlatList
-            data={availableQuantity}
-            keyExtractor={(item) => item.quantity}
-            horizontal
-            renderItem={renderItem}
-            showsHorizontalScrollIndicator={false}
-          />
+          <View>
+            {availableQuantity && availableQuantity.length > 0 ? (
+              <>
+                <AppText
+                  style={{
+                    fontFamily: "Quicksand_700Bold",
+                    marginVertical: 10,
+                  }}
+                >
+                  Also Available in :
+                </AppText>
+                <FlatList
+                  data={availableQuantity}
+                  keyExtractor={(item) => item.quantity}
+                  horizontal
+                  renderItem={renderItem}
+                  showsHorizontalScrollIndicator={false}
+                />
+              </>
+            ) : (
+              <AppText style={{ color: colors.primary }}>{quantity}</AppText>
+            )}
+          </View>
           <View style={{ marginTop: 15 }}>
-            <AppText style={{ fontWeight: "bold" }}>About Product</AppText>
+            <AppText style={{ fontFamily: "Quicksand_700Bold" }}>
+              About Product
+            </AppText>
             <AppText style={{ marginTop: 5 }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erit enim
-              instructus ad mortem contemnendam, ad exilium
+              instructus.
             </AppText>
           </View>
           <View style={styles.buttonContainer}>
@@ -161,8 +191,14 @@ export default function DetailScreen({ route }) {
                 <CartButton
                   title={"Add To Cart"}
                   style={styles.cartButton}
-                  titleStyle={{ color: "white", fontWeight: "bold" }}
-                  onPress={() => context.addItems(item)}
+                  titleStyle={{
+                    color: "white",
+                    fontFamily: "Quicksand_700Bold",
+                  }}
+                  onPress={
+                    () => itemAdded(item, updatedprice, selectedQuantity)
+                    // context.addItems(item, updatedprice, selectedQuantity)
+                  }
                 />
               </View>
             ) : (
@@ -170,7 +206,10 @@ export default function DetailScreen({ route }) {
                 <CartButton
                   title={"Go To Cart"}
                   style={styles.cartButton}
-                  titleStyle={{ color: "white", fontWeight: "bold" }}
+                  titleStyle={{
+                    color: "white",
+                    fontFamily: "Quicksand_700Bold",
+                  }}
                   onPress={() => navigation.navigate("cart")}
                 />
               </View>
@@ -185,23 +224,17 @@ export default function DetailScreen({ route }) {
             name="chevron-with-circle-left"
             color="white"
             type="entypo"
-            size={25}
+            size={30}
             containerStyle={{ justifyContent: "center", alignItems: "center" }}
           />
         </TouchableOpacity>
       </View>
       <View style={styles.cartContainer}>
         <TouchableOpacity
-          style={{
-            padding: 3,
-            borderRadius: 50,
-            borderWidth: 1.5,
-            overflow: "hidden",
-            borderColor: "white",
-          }}
+          style={styles.cartIcon}
           onPress={() => navigation.navigate("cart")}
         >
-          <Icon name="shoppingcart" color="white" type="antdesign" size={18} />
+          <Icon name="shoppingcart" color="white" type="antdesign" size={23} />
         </TouchableOpacity>
       </View>
     </View>
@@ -223,14 +256,34 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     borderWidth: 0,
   },
+  priceContainer: {
+    flexDirection: "row",
+    marginVertical: 5,
+    alignItems: "center",
+  },
+  priceContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 15,
+    paddingHorizontal: 10,
+  },
+  cartIcon: {
+    padding: 3,
+    borderRadius: 50,
+    borderWidth: 1.5,
+    overflow: "hidden",
+    borderColor: "white",
+  },
   price: {
-    fontWeight: "bold",
+    fontFamily: "Quicksand_700Bold",
     color: colors.primary1,
   },
   iconStyle: {
-    marginTop: 3,
-    justifyContent: "center",
+    marginTop: 4,
+    textAlign: "center",
     alignItems: "center",
+    justifyContent: "center",
   },
   imageContainer: {
     height: "35%",
@@ -262,7 +315,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   contentStyle: {
-    paddingBottom: 25,
+    paddingBottom: "5%",
     paddingHorizontal: 5,
     paddingTop: 10,
   },
@@ -289,7 +342,8 @@ const styles = StyleSheet.create({
   quantityContainer: {
     borderRadius: 20,
     borderWidth: 1,
-    padding: 10,
+    paddingHorizontal: 5,
+    paddingVertical: 10,
     justifyContent: "center",
     alignItems: "center",
     marginRight: 8,
@@ -298,7 +352,8 @@ const styles = StyleSheet.create({
   selectedQuantityContainer: {
     borderRadius: 20,
     borderWidth: 1,
-    padding: 10,
+    paddingHorizontal: 5,
+    paddingVertical: 10,
     justifyContent: "center",
     alignItems: "center",
     marginRight: 8,
